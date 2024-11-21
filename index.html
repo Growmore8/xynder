@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xynder Payment Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    Xynder Payment Portal
+  </header>
+
+  <div class="payment-options">
+    <button id="localPaymentBtn">Local Payment</button>
+    <button id="cryptoPaymentBtn">Crypto Payment</button>
+  </div>
+
+  <div class="payment-method local-payment" id="localPayment">
+    <div class="merchant-list" id="merchantGrid"></div>
+  </div>
+
+  <div class="payment-method crypto-payment" id="cryptoPayment">
+    <div class="crypto-grid" id="cryptoGrid"></div>
+  </div>
+
+  <!-- Modal for Merchant Details (Local Payment) -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="merchantDetails"></div>
+    </div>
+  </div>
+
+  <!-- Modal for Crypto Payment Details -->
+  <div id="cryptoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="cryptoDetails"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-icons">
+      <img src="assets/bep.png" alt="BEP" />
+      <img src="assets/et.png" alt="ET" />
+      <img src="assets/trc.png" alt="TRC" />
+      <img src="assets/gp.png" alt="GP" />
+      <img src="assets/pp.png" alt="PP" />
+      <img src="assets/upi.png" alt="UPI" />
+    </div>
+  </div>
+
+  <footer>
+    Powered by Xynder. &copy; 2024 All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
