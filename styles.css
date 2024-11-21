@@ -9,6 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
 }
 
 header {
@@ -16,7 +17,7 @@ header {
   color: white;
   text-align: center;
   padding: 20px 0;
-  font-size: 28px;
+  font-size: 2.2rem;
   font-weight: 600;
   letter-spacing: 1.5px;
   word-wrap: break-word;
@@ -25,7 +26,7 @@ header {
 /* Payment Button Styling */
 button {
   padding: 16px 32px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   background-color: #007bff;
@@ -58,7 +59,9 @@ button:focus {
 }
 
 .payment-options button {
-  width: 200px;
+  width: 200px;  /* Increased width for buttons */
+  padding: 18px 36px;  /* Increased padding for larger buttons */
+  font-size: 1.1rem;  /* Slightly bigger font */
   max-width: 100%;
 }
 
@@ -89,6 +92,8 @@ button:focus {
   width: 100%;
   max-width: 300px;
   box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .merchant-card:hover,
@@ -146,17 +151,16 @@ button.pay-now:hover {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000; /* Ensure modal is on top */
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* Darker background */
+  background-color: rgba(0, 0, 0, 0.9);
   padding-top: 80px;
-  backdrop-filter: blur(10px); /* Apply blur effect to background */
+  backdrop-filter: blur(10px);
 }
 
-/* Modal Content */
 .modal-content {
   background-color: #fff;
   margin: 5% auto;
@@ -166,10 +170,11 @@ button.pay-now:hover {
   max-width: 600px;
   border-radius: 10px;
   position: relative;
-  z-index: 1010; /* Ensure modal content is above the blurred background */
+  z-index: 1010;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Close button styles for modal */
 .close {
   position: absolute;
   top: 10px;
@@ -179,22 +184,11 @@ button.pay-now:hover {
   cursor: pointer;
 }
 
-/* Copy Icon Styling */
-.copy-icon {
-  cursor: pointer;
-  margin-left: 10px;
-  color: #007bff;
-}
-
-.copy-icon:hover {
-  color: #0056b3;
-}
-
 /* Footer Icons Fixed Carousel */
 .footer-icons-carousel {
   width: 100%;
   position: fixed;
-  bottom: 60px;  /* Adjusted to create space between the footer icons and the footer */
+  bottom: 60px;
   left: 0;
   background-color: #333;
   padding: 10px 0;
@@ -205,22 +199,21 @@ button.pay-now:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
   width: 100%;
   overflow: visible;
 }
 
 .footer-icons img {
-  width: 50px;
-  margin: 0 15px;
-  animation: none; /* No animation needed for fixed icons */
+  width: 40px;
+  margin: 0 10px;
+  animation: none;
 }
 
 .footer-icons img:hover {
   transform: scale(1.1);
 }
 
-/* Footer Styling */
 footer {
   background-color: #333;
   color: white;
@@ -228,7 +221,7 @@ footer {
   padding: 20px;
   font-size: 14px;
   position: relative;
-  margin-top: 60px; /* Added space to push the footer down and clear the icons */
+  margin-top: 60px;
 }
 
 footer p {
@@ -236,24 +229,27 @@ footer p {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   body {
     font-size: 14px;
   }
 
   header {
-    font-size: 24px;
+    font-size: 1.8rem;
   }
 
   .payment-options {
     flex-direction: column;
+    gap: 20px;
     margin-top: 30px;
+    justify-content: center; /* Ensures buttons are centered */
   }
 
   .payment-options button {
-    width: 100%;
-    margin-bottom: 10px;
-    font-size: 14px;
+    width: 190px;  /* Slightly increased width for medium screens */
+    padding: 16px 32px;  /* Larger padding for bigger buttons */
+    font-size: 1.1rem;  /* Bigger text size */
+    margin: 10px auto;  /* Center the buttons */
   }
 
   .merchant-list,
@@ -265,24 +261,26 @@ footer p {
 
   .merchant-card,
   .crypto-card {
-    width: 90%;
-    max-width: 90%;
+    width: 80%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   footer {
     font-size: 12px;
   }
 
-  /* Adjust modal content width */
   .modal-content {
-    width: 90%;
+    width: 80%;
     max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  /* Footer Icons Adjustment for small screens */
   .footer-icons img {
-    width: 40px;
-    margin: 0 10px;
+    width: 35px;
+    margin: 0 8px;
   }
 
   .modal {
@@ -290,9 +288,45 @@ footer p {
   }
 }
 
+@media (max-width: 768px) {
+  header {
+    font-size: 1.5rem;
+  }
+
+  .payment-options {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center; /* Center buttons */
+  }
+
+  .payment-options button {
+    width: 180px;  /* Slightly increased width for smaller screens */
+    padding: 14px 28px;  /* Larger padding */
+    margin: 10px auto;  /* Center the buttons */
+  }
+
+  .footer-icons img {
+    width: 35px;
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
 @media (max-width: 480px) {
-  .merchant-card h3, .crypto-card h3 {
-    font-size: 16px; /* Smaller font size for cards */
+  .merchant-card h3,
+  .crypto-card h3 {
+    font-size: 1rem;
   }
 
   footer {
@@ -300,12 +334,38 @@ footer p {
   }
 
   .footer-icons img {
-    width: 35px; /* Even smaller icons */
+    width: 30px;
   }
 
-  /* Modal width and text size adjustments */
   .modal-content {
     padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modal {
+    padding-top: 40px;
+  }
+
+  /* Centering the card and modal buttons */
+  .payment-options button {
+    width: 160px;
+    padding: 14px 28px;
+    font-size: 1rem;
+    margin: 10px auto;  /* Center the buttons */
+  }
+
+  .modal-content {
+    padding: 20px;
+    width: 90%;
+    max-width: 320px;  /* Adjusted max-width for better centering */
+  }
+
+  .merchant-card,
+  .crypto-card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;  /* Ensures the cards are centered and slightly smaller */
   }
 
   .modal {
@@ -317,7 +377,7 @@ footer p {
 .payment-method {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the content horizontally */
+  align-items: center;
   padding: 40px 20px;
   text-align: center;
 }
@@ -329,7 +389,7 @@ button.pay-now {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: auto; /* Adjusted width to auto for centering */
+  width: auto;
   margin-top: 20px;
 }
 
