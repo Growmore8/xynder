@@ -272,18 +272,47 @@ footer p {
   footer {
     font-size: 12px;
   }
+
+  /* Adjust modal content width */
+  .modal-content {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  /* Footer Icons Adjustment for small screens */
+  .footer-icons img {
+    width: 40px;
+    margin: 0 10px;
+  }
+
+  .modal {
+    padding-top: 50px;
+  }
 }
 
 @media (max-width: 480px) {
-  .merchant-card h3,
-  .crypto-card h3 {
-    font-size: 18px;
+  .merchant-card h3, .crypto-card h3 {
+    font-size: 16px; /* Smaller font size for cards */
   }
 
   footer {
     font-size: 10px;
   }
+
+  .footer-icons img {
+    width: 35px; /* Even smaller icons */
+  }
+
+  /* Modal width and text size adjustments */
+  .modal-content {
+    padding: 20px;
+  }
+
+  .modal {
+    padding-top: 40px;
+  }
 }
+
 /* Payment Method Section */
 .payment-method {
   display: flex;
