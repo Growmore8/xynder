@@ -1,0 +1,309 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  word-wrap: break-word;
+}
+
+/* Payment Button Styling */
+button {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Payment Options Section */
+.payment-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.payment-options button {
+  width: 200px;
+  max-width: 100%;
+}
+
+/* Payment Method Section */
+.payment-method {
+  display: none;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.merchant-list,
+.crypto-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.merchant-card,
+.crypto-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.merchant-card:hover,
+.crypto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.merchant-card h3,
+.crypto-card h3 {
+  font-size: 20px;
+  color: #333;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.status {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.status.online {
+  color: #28a745; /* Green */
+}
+
+.status.offline {
+  color: #dc3545; /* Red */
+}
+
+.completion,
+.limit {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+  word-wrap: break-word;
+}
+
+button.pay-now {
+  padding: 12px 24px;
+  background-color: #28a745;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button.pay-now:hover {
+  background-color: #218838;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000; /* Ensure modal is on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Darker background */
+  padding-top: 80px;
+  backdrop-filter: blur(10px); /* Apply blur effect to background */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1010; /* Ensure modal content is above the blurred background */
+}
+
+/* Close button styles for modal */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Copy Icon Styling */
+.copy-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #007bff;
+}
+
+.copy-icon:hover {
+  color: #0056b3;
+}
+
+/* Footer Icons Fixed Carousel */
+.footer-icons-carousel {
+  width: 100%;
+  position: fixed;
+  bottom: 60px;  /* Adjusted to create space between the footer icons and the footer */
+  left: 0;
+  background-color: #333;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+  overflow: visible;
+}
+
+.footer-icons img {
+  width: 50px;
+  margin: 0 15px;
+  animation: none; /* No animation needed for fixed icons */
+}
+
+.footer-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  position: relative;
+  margin-top: 60px; /* Added space to push the footer down and clear the icons */
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    font-size: 24px;
+  }
+
+  .payment-options {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .payment-options button {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .merchant-list,
+  .crypto-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .merchant-card,
+  .crypto-card {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .merchant-card h3,
+  .crypto-card h3 {
+    font-size: 18px;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+}
+/* Payment Method Section */
+.payment-method {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+button.pay-now {
+  padding: 12px 24px;
+  background-color: #28a745;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto; /* Adjusted width to auto for centering */
+  margin-top: 20px;
+}
+
+button.pay-now:hover {
+  background-color: #218838;
+}
